@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+
+    <TextView
+        android:id="@+id/punch_on_duty"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/circle_off_duty_base"
+        android:textColor="#990088ff"
+        android:text="签 到"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/punch_off_duty"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/punch_off_duty" />
+
+    <TextView
+        android:id="@+id/punch_date_status"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/circle_date_status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <TextView
+        android:id="@+id/punch_off_duty"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle_on_duty_base"
+        android:textColor="#9960b326"
+        android:text="签 退"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toBottomOf="@+id/punch_date_status" />
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:format24Hour="HH : mm : ss"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/punch_date_status"
+        app:layout_constraintEnd_toEndOf="@+id/punch_date_status"
+        app:layout_constraintStart_toStartOf="@+id/punch_date_status"
+        app:layout_constraintTop_toTopOf="@+id/punch_date_status" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <View
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:background="@drawable/circle_date_status_out_two"
+        app:layout_constraintBottom_toBottomOf="@+id/punch_date_status"
+        app:layout_constraintEnd_toEndOf="@+id/punch_date_status"
+        app:layout_constraintStart_toStartOf="@+id/punch_date_status"
+        app:layout_constraintTop_toTopOf="@+id/punch_date_status" />
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/circle_date_status_out_three"
+        app:layout_constraintBottom_toBottomOf="@+id/punch_date_status"
+        app:layout_constraintEnd_toEndOf="@+id/punch_date_status"
+        app:layout_constraintStart_toStartOf="@+id/punch_date_status"
+        app:layout_constraintTop_toTopOf="@+id/punch_date_status" />
+
+    <TextView
+        android:id="@+id/yesterday_off_duty"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/yesterday_off_duty"
+        android:gravity="center"
+        android:text="昨 日 签 退"
+        android:textColor="#99a36320"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/punch_off_duty"
+        app:layout_constraintStart_toStartOf="@+id/punch_on_duty"
+        app:layout_constraintTop_toBottomOf="@+id/punch_off_duty" />
+
+
+</android.support.constraint.ConstraintLayout>

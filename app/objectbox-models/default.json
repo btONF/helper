@@ -1,0 +1,61 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3160178369212652640",
+      "lastPropertyId": "10:1791574644953062706",
+      "name": "PunchCardData",
+      "properties": [
+        {
+          "id": "1:6811547356736512339",
+          "name": "id"
+        },
+        {
+          "id": "2:1426150918223696395",
+          "indexId": "1:5182238323843396158",
+          "name": "year"
+        },
+        {
+          "id": "3:2898297720719314558",
+          "indexId": "2:6822630433327948312",
+          "name": "month"
+        },
+        {
+          "id": "4:2870807676463916386",
+          "indexId": "3:5356840608446709393",
+          "name": "day"
+        },
+        {
+          "id": "8:4862480039194462598",
+          "name": "calendar"
+        },
+        {
+          "id": "9:7233979764286400070",
+          "name": "onDutyTimeLong"
+        },
+        {
+          "id": "10:1791574644953062706",
+          "name": "offDutyTimeLong"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:3160178369212652640",
+  "lastIndexId": "3:5356840608446709393",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    9055774658370837690,
+    6155507704271294521,
+    122121422424083638
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+android {
+    signingConfigs {
+        debug {
+            keyAlias 'helper'
+            keyPassword '12345678'
+            storeFile file('C:/Users/18030693/helper.jks')
+            storePassword '12345678'
+        }
+    }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.bt.helper.helper"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:26.0.2'
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    implementation 'com.suning.mobile.epa:gson:2.8.0'
+    implementation 'com.haibin:calendarview:3.4.0'
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+    debugImplementation "io.objectbox:objectbox-android-objectbrowser:$objectboxVersion"
+    releaseImplementation "io.objectbox:objectbox-android:$objectboxVersion"
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+}
+apply plugin: 'io.objectbox'
